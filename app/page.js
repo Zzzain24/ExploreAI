@@ -4,12 +4,6 @@ import { Box, IconButton, Stack, TextField, createTheme, ThemeProvider, Typograp
 import Brightness2Icon from '@mui/icons-material/Brightness2'; 
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
-const response = await fetch('/api/chat', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify([{ role: 'user', prompt: message }]),
-});
-
 export default function Home() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
